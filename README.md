@@ -2,6 +2,7 @@
 # DyCoke : **Dynamic Compression of Tokens for Fast Video Large Language Models**
 
 Keda Tao, Can Qin, Haoxuan You, Yang Sui, Huan Wang, "DyCoke 🥤Dynamic Compression of Tokens for Fast Video Large Language Models"
+
 [[Paper](https://arxiv.org/abs/2411.15024)]
 
 ![overview](figures/overview.png)
