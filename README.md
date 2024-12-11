@@ -9,7 +9,7 @@ Keda Tao, Can Qin, Haoxuan You, Yang Sui, Huan Wang, "DyCoke 🥤Dynamic Compres
 #### 🔥🔥🔥 News
 
 - **2024-11-22:** This repo is released.
-- **2024-11-25**: **The paper was released.**
+- **2024-11-25**: **The paper is released.**
 
 ![video](figures/video.gif)
 
