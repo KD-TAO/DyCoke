@@ -53,7 +53,7 @@ pip install -e ".[train]"
 --model_args pretrained=lmms-lab/llava-onevision-qwen2-0.5b-ov,conv_template=qwen_1_5,model_name=llava_qwen,dycoke=True,dycoke_num_image_per_frame=$YOUR_NUM,image_token_start_index=$YOUR_IDX \
 ...
 ```
-##### 1. **Test on the specified task：
+##### 1. Test on the specified task：
 ```bash
 accelerate launch --num_processes=8 \
 -m lmms_eval \
