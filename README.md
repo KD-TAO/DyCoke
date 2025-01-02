@@ -1,7 +1,7 @@
 
 # DyCoke : **Dynamic Compression of Tokens for Fast Video Large Language Models**
 
-Keda Tao, Can Qin, Haoxuan You, Yang Sui, Huan Wang, "DyCoke 🥤Dynamic Compression of Tokens for Fast Video Large Language Models"
+[Keda Tao](), [Can Qin](https://canqin.tech/), [Haoxuan You](https://hxyou.github.io/), [Yang Sui](https://eclipsess.github.io/yangsui.github.io/), [Huan Wang](https://huanwang.tech/), "DyCoke 🥤Dynamic Compression of Tokens for Fast Video Large Language Models"
 
 [[Paper](https://arxiv.org/abs/2411.15024)]
 
@@ -33,8 +33,8 @@ cd DyCoke
 
 ##### 2. **Install the inference package:**
 ```bash
-conda create -n llava python=3.10 -y
-conda activate llava
+conda create -n dycoke python=3.10 -y
+conda activate dycoke
 pip install --upgrade pip  # Enable PEP 660 support.
 pip install -e ".[train]"
 ```
@@ -59,7 +59,7 @@ accelerate launch --num_processes=8 \
 -m lmms_eval \
 --model llava_onevision \
 --model_args pretrained=lmms-lab/llava-onevision-qwen2-7b-ov,conv_template=qwen_1_5,model_name=llava_qwen,dycoke=True \
---tasks $YOUR-TASKS \
+--tasks $YOUR-TASKS \  # Such as "activitynetqa,video_dc499,perceptiontest_val_mc,videomme_w_subtitle,videomme,nextqa_mc_test..."
 --batch_size 1 \
 --log_samples \
 --log_samples_suffix llava_onevision \
@@ -68,6 +68,18 @@ accelerate launch --num_processes=8 \
 ##### 2. **Reproduce the results**：
 ```bash
 bash eval.sh
+```
+##### 3. **Test on the LLaVA-OV-72B**：
+```bash
+CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7,8 accelerate launch --num_processes=1 \
+-m lmms_eval \
+--model llava_onevision \
+--model_args pretrained=lmms-lab/llava-onevision-qwen2-7b-ov,conv_template=qwen_1_5,model_name=llava_qwen,dycoke=True,device_map=auto \
+--tasks $YOUR-TASKS \  # Such as "activitynetqa,video_dc499,perceptiontest_val_mc,videomme_w_subtitle,videomme,nextqa_mc_test..."
+--batch_size 1 \
+--log_samples \
+--log_samples_suffix llava_onevision \
+--output_path ./logs/
 ```
 
 ## 👀 Results on Video-Language Models
@@ -82,3 +94,16 @@ This project is based on [LLavVA-NeXT](https://github.com/LLaVA-VL/LLaVA-NeXT). 
 ## Contact
 
 If you have any questions, please feel free to contact with me at KD.TAO.CT@outlook.com
+
+## Citation
+
+If you find this work useful for your research, please consider citing our paper:
+
+```bibtex
+@article{tao2024dycoke,
+  title={DyCoke: Dynamic Compression of Tokens for Fast Video Large Language Models},
+  author={Tao, Keda and Qin, Can and You, Haoxuan and Sui, Yang and Wang, Huan},
+  journal={arXiv preprint arXiv:2411.15024},
+  year={2024}
+}
+```
