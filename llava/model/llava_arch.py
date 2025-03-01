@@ -57,7 +57,7 @@ def dycole_ttm(image_feature, num_tokens_per_frame = 196, merging_ratio = 0.7):
         frame1_tokens = image_feature[i * num_tokens_per_frame: (i + 1) * num_tokens_per_frame]
         frame2_tokens = image_feature[(i + 1) * num_tokens_per_frame: (i + 2) * num_tokens_per_frame]
         
-        avg_similarity = similarities[(i - 2) // 2]
+        avg_similarity = similarities[i // 2]
         num_tokens_to_keep = int(merging_ratio * num_tokens_per_frame)
         tokens_to_keep = avg_similarity.topk(num_tokens_to_keep, largest=False).indices
         
