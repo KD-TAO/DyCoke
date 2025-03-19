@@ -1,8 +1,8 @@
 # IMPORTANT: Set your OpenAI API key
 export OPENAI_API_KEY="YOUR_OPENAI_API_KEY"
 
-CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7,8 accelerate launch \
-    --num_processes=9 \
+CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 accelerate launch \
+    --num_processes=8 \
     --main_process_port=25001 \
     -m lmms_eval \
     --model llava_onevision \
