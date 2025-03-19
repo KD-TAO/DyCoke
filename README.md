@@ -11,7 +11,8 @@
 #### 🔥🔥🔥 News
 
 - **2024-11-22:** This repo is released.
-- **2024-11-25**: **The paper is released.**
+- **2024-11-25**: The paper is released.
+- **2024-02-26**: **Our paper has been accepted by CVPR 2025!**
 
 ![overview](figures/overview.png)
 
@@ -90,7 +91,7 @@ CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7,8 accelerate launch --num_processes=1 \
 ![overview](figures/case.png)
 ## Acknowledgement
 
-This project is based on [LLavVA-NeXT](https://github.com/LLaVA-VL/LLaVA-NeXT). Thanks for their awesome work.
+This project is based on [LLaVA-NeXT](https://github.com/LLaVA-VL/LLaVA-NeXT). Thanks for their awesome work.
 
 ## Contact
 
