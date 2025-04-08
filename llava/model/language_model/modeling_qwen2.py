@@ -856,8 +856,8 @@ class Qwen2DecoderLayer(nn.Module):
 
         outputs = (hidden_states,)
 
-        if output_attentions:
-            outputs += (self_attn_weights,)
+
+        outputs += (self_attn_weights,)
 
         if use_cache:
             outputs += (present_key_value,)
