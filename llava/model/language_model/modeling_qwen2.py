@@ -857,7 +857,8 @@ class Qwen2DecoderLayer(nn.Module):
         outputs = (hidden_states,)
 
 
-        outputs += (self_attn_weights,)
+        if output_attentions:
+            outputs += (self_attn_weights,)
 
         if use_cache:
             outputs += (present_key_value,)
@@ -1264,7 +1265,7 @@ class Qwen2ForCausalLM(Qwen2PreTrainedModel):
         return_dict = return_dict if return_dict is not None else self.config.use_return_dict
 
         # decoder outputs consists of (dec_features, layer_state, dec_hidden, dec_attn)
-        
+        output_attentions = True
         outputs = self.model(
             input_ids=input_ids,
             attention_mask=attention_mask,
