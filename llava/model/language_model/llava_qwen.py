@@ -66,11 +66,12 @@ class LlavaQwenForCausalLM(Qwen2ForCausalLM, LlavaMetaForCausalLM):
         self.post_init()
 
         self.dycoke = None
-        self.model.dycoke = self.dycoke
+        
         self.dycoke_configs = DycokeConfigs()
 
     def init_dycoke(self):
         # Dycoke parameters
+        self.model.dycoke = self.dycoke
         self.model.dycoke_l = self.dycoke_l
         self.model.dycoke_p = self.dycoke_p
         self.model.dycoke_num_tokens_per_frame = self.dycoke_num_tokens_per_frame
@@ -148,6 +149,7 @@ class LlavaQwenForCausalLM(Qwen2ForCausalLM, LlavaMetaForCausalLM):
         modalities: Optional[List[str]] = ["image"],
         **kwargs,
     ) -> Union[GenerateOutput, torch.LongTensor]:
+        self.model.dycoke = self.dycoke
         if self.dycoke:
             self.init_dycoke()
         position_ids = kwargs.pop("position_ids", None)
