@@ -12,7 +12,7 @@
 
 - **2024-11-22:** This repo is released.
 - **2024-11-25**: The paper is released.
-- **2024-02-26**: **Our paper has been accepted by CVPR 2025!**
+- **2025-02-26**: **Our paper has been accepted by CVPR 2025!**
 
 ![overview](figures/overview.png)
 
