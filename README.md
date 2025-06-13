@@ -102,10 +102,11 @@ If you have any questions, please feel free to contact with me at KD.TAO.CT@outl
 If you find this work useful for your research, please consider citing our paper:
 
 ```bibtex
-@inproceedings{tao2024dycoke,
+@inproceedings{tao2025dycoke,
   title={DyCoke: Dynamic Compression of Tokens for Fast Video Large Language Models},
   author={Tao, Keda and Qin, Can and You, Haoxuan and Sui, Yang and Wang, Huan},
-  booktitle={CVPR},
+  booktitle={Proceedings of the Computer Vision and Pattern Recognition Conference},
+  pages={18992--19001},
   year={2025}
 }
 ```
