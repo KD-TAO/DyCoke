@@ -10,9 +10,10 @@
 ![video](figures/video-ezgif.com-resize-2.gif)
 #### 🔥🔥🔥 News
 
-- **2024-11-22:** This repo is released.
-- **2024-11-25**: The paper is released.
+- **2025-11-10**: Thanks to [mvish7](https://github.com/mvish7), DyCoke can be used in Gemma3 and Qwen2.5-VL now ([Link](https://github.com/mvish7/dycoke_token_compression/)!
 - **2025-02-26**: **Our paper has been accepted by CVPR 2025!**
+- **2024-11-25**: The paper is released.
+- **2024-11-22:** This repo is released.
 
 ![overview](figures/overview.png)
 
@@ -23,7 +24,7 @@
 
 * [x] Release Paper 
 * [x] Release code 
-* [ ] Support more models
+* [x] Support more models
 
 ## Install
 ##### 1. **Clone this repository and navigate to the LLaVA folder:**
